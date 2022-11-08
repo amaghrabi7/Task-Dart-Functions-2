@@ -31,10 +31,9 @@ void greet(String name) {
  */
 bool isOdd(int n) {
   if (n % 2 == 0) {
-    return true;
-  } else {
     return false;
   }
+  return true;
 }
 
 /**
@@ -65,9 +64,5 @@ double oddsSmallerThan(int n) {
  * squareOrDouble(9) -> 81
  */
 int squareOrDouble(int n) {
-  if (n % 2 == 0) {
-    return n * 2;
-  } else {
-    return n * n;
-  }
+  return isOdd(n) ? n * n : n * 2;
 }

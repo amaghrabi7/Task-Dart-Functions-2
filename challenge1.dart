@@ -1,7 +1,7 @@
 void main() {
   printName();
   printAge(1985);
-  printHello('Abdulrahman', 'ar');
+  printHello('Abdulrahman', 'tr');
   printMax(13, 55);
 }
 
@@ -43,7 +43,7 @@ void printHello(String name, String language) {
     print('Hola ${name.toUpperCase()}');
   } else if (language == 'fr') {
     print('Bonjour ${name.toUpperCase()}');
-  } else if (language == 'ar') {
+  } else if (language == 'tr') {
     print('Merhaba ${name.toUpperCase()}');
   }
 }
@@ -54,10 +54,12 @@ void printHello(String name, String language) {
  * - that takes two numbers as parameters,
  * - and prints out the bigger number
  */
-void printMax(int a, int b) {
-  if (a > b) {
-    print(a);
+void printMax(int num1, int num2) {
+  if (num1 == num2) {
+    print('Equal');
+  } else if (num1 > num2) {
+    print(num1);
   } else {
-    print(b);
+    print(num2);
   }
 }
