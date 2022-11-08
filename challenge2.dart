@@ -1,3 +1,13 @@
+void main() {
+  greet('khalid');
+  print(isOdd(4));
+  print(isOdd(5));
+  print(oddsSmallerThan(19));
+  print(oddsSmallerThan(12));
+  print(squareOrDouble(6));
+  print(squareOrDouble(3));
+}
+
 /**
  * greet(name):
  * - receives a name,
@@ -7,7 +17,7 @@
  * greet("Hamza") => prints "Hello Hamza"
  */
 void greet(String name) {
-  // Your code here
+  print('Hello $name');
 }
 
 /**
@@ -20,7 +30,11 @@ void greet(String name) {
  * isOdd(10) -> false
  */
 bool isOdd(int n) {
-  // Your code here
+  if (n % 2 == 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -32,8 +46,12 @@ bool isOdd(int n) {
  * oddsSmallerThan(7) -> 3
  * oddsSmallerThan(15) -> 7
  */
-int oddsSmallerThan(int n) {
-  // Your code here
+double oddsSmallerThan(int n) {
+  if (n % 2 == 0) {
+    return n / 2;
+  } else {
+    return (n - 1) / 2;
+  }
 }
 
 /**
@@ -47,5 +65,9 @@ int oddsSmallerThan(int n) {
  * squareOrDouble(9) -> 81
  */
 int squareOrDouble(int n) {
-  // Your code here
+  if (n % 2 == 0) {
+    return n * 2;
+  } else {
+    return n * n;
+  }
 }

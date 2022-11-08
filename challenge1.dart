@@ -1,8 +1,18 @@
+void main() {
+  printName();
+  printAge(1985);
+  printHello('Abdulrahman', 'ar');
+  printMax(13, 55);
+}
+
 /**
  * Task 1:
  * Create a function called `printName`
  * - that prints your name on the screen.
  */
+void printName() {
+  print('Abdulrahman');
+}
 
 /**
  * Task 2:
@@ -11,6 +21,10 @@
  * - and prints the age on the screen.
  * - Age = current year - birth
  */
+void printAge(int yOb) {
+  int Age = 2022 - yOb;
+  print(Age);
+}
 
 /**
  * Task 3:
@@ -22,6 +36,17 @@
  * -- fr: it should print `Bonjour NAME`
  * -- tr: it should print `Merhaba NAME`
  */
+void printHello(String name, String language) {
+  if (language == 'en') {
+    print('Hello ${name.toUpperCase()}');
+  } else if (language == 'es') {
+    print('Hola ${name.toUpperCase()}');
+  } else if (language == 'fr') {
+    print('Bonjour ${name.toUpperCase()}');
+  } else if (language == 'ar') {
+    print('Merhaba ${name.toUpperCase()}');
+  }
+}
 
 /**
  * Task 4:
@@ -29,3 +54,10 @@
  * - that takes two numbers as parameters,
  * - and prints out the bigger number
  */
+void printMax(int a, int b) {
+  if (a > b) {
+    print(a);
+  } else {
+    print(b);
+  }
+}
